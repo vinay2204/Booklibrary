@@ -1,0 +1,22 @@
+[
+    {
+        "userName" :"raman12@gmail.com",
+        "password": "raman@123",
+        "isAdmin": true
+        
+    },
+    {
+        "userName" :"ram12@gmail.com",
+        "password": "raman@1253",
+        "isAdmin": true
+        
+    },
+    {
+        "userName" :"rajan12@gmail.com",
+        "password": "raman@12356",
+        "isAdmin": false
+        
+    }
+
+
+]
