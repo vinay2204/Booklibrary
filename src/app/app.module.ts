@@ -9,6 +9,10 @@ import { LoginReactiveComponent } from './login-reactive/login-reactive.componen
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ToastrModule } from 'ngx-toastr';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -18,10 +22,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
    [BrowserModule,
      AppRoutingModule,
       FormsModule,
-      HttpClientModule
+      HttpClientModule,
+      CommonModule,
+      BrowserAnimationsModule,
+      ToastrModule.forRoot(),
     
     ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

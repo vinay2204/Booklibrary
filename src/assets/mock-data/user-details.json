@@ -1,21 +1,23 @@
 [
     {
         "userName" :"raman12@gmail.com",
-        "password": "raman@123",
-        "isAdmin": true
+        "password": "Raman@123",
+        "isAdmin": true,
+        "authToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InJhbWFuMTJAZ21haWwuY29tIn0.soqHHwMyOVKC2fwqOmaLLD-g0gVwgoaF2xyCGjJY9bI"
         
     },
     {
         "userName" :"ram12@gmail.com",
         "password": "raman@1253",
-        "isAdmin": true
+        "isAdmin": true,
+        "authToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InJhbTEyQGdtYWlsLmNvbSJ9.VSrlDIA5AFOFz7vg63nahD8Odtqdbmh33KzjUxTGJBw"
         
     },
     {
         "userName" :"rajan12@gmail.com",
         "password": "raman@12356",
-        "isAdmin": false
-        
+        "isAdmin": false,
+        "authToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InJhamFuMTJAZ21haWwuY29tIn0.eB3nQnaNrHMZrC0TBN6vdjogx2D2-P_oSaQa9jIIZuI"
     }
 
 
