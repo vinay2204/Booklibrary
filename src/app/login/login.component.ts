@@ -32,5 +32,18 @@ export class LoginComponent implements OnInit {
     });
     
 
-  }
+ 
+
+  this.userService.getUsers().subscribe(password =>{console.log(password);
+    if(password.filter(user =>user.password == this.userModel.password).length>0)
+    {
+      this.notifactionService.success(`${this.userModel.password} logged in Successfully.`);
+      this.router.navigate(["/dashboard"]);
+      
+    }
+    else{this.notifactionService.error("Check your Password")} 
+  });
+   }
+
 }
+
