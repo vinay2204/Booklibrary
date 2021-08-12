@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserModel } from '../model/user.model';
 import { NotifactionService } from '../shared/notifaction.service';
 import { UserService } from '../services/user.service';
+import { AuthService } from '../services/auth.service';
+// import { CookieService } from 'ngx-cookie-service';
+// import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -10,40 +13,57 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  userModel:UserModel = new UserModel();
+  userModel: UserModel = new UserModel();
+   returnUrl: string='/';
 
-  constructor(private userService: UserService , private notifactionService:NotifactionService,
-     private router:Router,
+  constructor(
+    private userService: UserService,
+    private notifactionService: NotifactionService,
+    private router: Router,
+    private authService :AuthService,
+    private route: ActivatedRoute,
+
     
-     ) {}
-
-  ngOnInit(): void {}
-
-   onUserFormSubmit()
-   {
-    this.userService.getUsers().subscribe(users =>{console.log(users);
-      if(users.filter(user =>user.userName == this.userModel.userName).length>0)
-      {
-        this.notifactionService.success(`${this.userModel.userName} logged in Successfully.`);
-        this.router.navigate(["/dashboard"]);
-        
-      }
-      else{this.notifactionService.error("User login failed")} 
-    });
-    
+  ) {}
 
  
 
-  this.userService.getUsers().subscribe(password =>{console.log(password);
-    if(password.filter(user =>user.password == this.userModel.password).length>0)
-    {
-      this.notifactionService.success(`${this.userModel.password} logged in Successfully.`);
-      this.router.navigate(["/dashboard"]);
-      
-    }
-    else{this.notifactionService.error("Check your Password")} 
-  });
-   }
+  ngOnInit(): void {
+    this.returnUrl = this.route.snapshot.queryParams["returnUrl"] || "/";
+  }
 
+  onUserFormSubmit() {
+    this.userService.getUsers().subscribe((users) => {
+      console.log(users);
+      if (
+        users.filter(
+          (user) =>
+            user.userName == this.userModel.userName &&
+            user.password == this.userModel.password
+        ).length > 0
+      ) {
+        this.notifactionService.success(
+          `${this.userModel.userName} logged in Successfully.`
+        );
+        this.authService.setCookies(users.filter(
+          (user) =>
+            user.userName == this.userModel.userName &&
+            user.password == this.userModel.password
+        )[0]);
+        this.router.navigate([this.returnUrl]);
+      } else {
+        this.notifactionService.error('User login failed');
+      }
+    });
+
+
+  }
 }
 
+function username(username: any) {
+  throw new Error('Function not implemented.');
+}
+
+function s(s: any) {
+  throw new Error('Function not implemented.');
+}

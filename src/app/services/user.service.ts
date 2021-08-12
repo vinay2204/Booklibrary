@@ -7,6 +7,7 @@ import { UserModel } from '../model/user.model';
   providedIn: 'root'
 })
 export class UserService {
+  cookie: any;
 
   constructor(private httpClient:HttpClient) {}
 

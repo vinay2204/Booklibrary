@@ -13,11 +13,14 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { CookieService } from 'ngx-cookie-service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AccessDeniedComponent } from './access-denied/access-denied.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, LoginReactiveComponent, DashboardComponent],
+  declarations: [AppComponent, LoginComponent, LoginReactiveComponent, DashboardComponent, PageNotFoundComponent, AccessDeniedComponent],
   imports:
    [BrowserModule,
      AppRoutingModule,
@@ -28,7 +31,7 @@ import { CommonModule } from '@angular/common';
       ToastrModule.forRoot(),
     
     ],
-  providers: [
+  providers: [ CookieService,
     
   ],
   bootstrap: [AppComponent],
