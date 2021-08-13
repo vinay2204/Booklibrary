@@ -24,13 +24,19 @@ export class Authguard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ):
-    | boolean
-    | UrlTree
-    | Observable<boolean | UrlTree>
-    | Promise<boolean | UrlTree> {
+  )
+   {
     let user: UserModel = this.authservice.getCookie();
+    let requestedPage:string = state.url.split("/")[1];
     if (user && user.userName !== '') {
+      if(requestedPage == "pagenotfound"){
+        return true;
+      }
+      if(!user.isAdmin){
+     
+        this.notificationservice.error('this user is not authorise to view this page');
+        this.router.navigate(['/accessdenied']);
+      }
       return true;
     } else {
       this.router.navigate(['/login'], {

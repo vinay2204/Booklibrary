@@ -4,8 +4,7 @@ import { UserModel } from '../model/user.model';
 import { NotifactionService } from '../shared/notifaction.service';
 import { UserService } from '../services/user.service';
 import { AuthService } from '../services/auth.service';
-// import { CookieService } from 'ngx-cookie-service';
-// import { CookieService } from 'ngx-cookie-service';
+
 
 @Component({
   selector: 'app-login',

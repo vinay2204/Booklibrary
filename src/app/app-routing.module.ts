@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Authguard } from './services/authguard.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AccessDeniedComponent } from './access-denied/access-denied.component';
 
 const routes: Routes = [
   {
@@ -19,6 +21,19 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent, canActivate:[Authguard]
   },
+  {path:'pagenotfound',
+  component : PageNotFoundComponent,canActivate:[Authguard]
+},
+{
+  path: 'accessdenied',
+  component : AccessDeniedComponent
+},
+{
+  path: '**',
+  redirectTo: '/pagenotfound',
+  pathMatch: 'full',
+},
+
 ];
 
 @NgModule({

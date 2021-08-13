@@ -15,7 +15,7 @@
     },
     {
         "userName" :"rajan12@gmail.com",
-        "password": "raman@12356",
+        "password": "Raman@12356",
         "isAdmin": false,
         "authToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InJhamFuMTJAZ21haWwuY29tIn0.eB3nQnaNrHMZrC0TBN6vdjogx2D2-P_oSaQa9jIIZuI"
     }
