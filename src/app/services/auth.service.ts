@@ -22,11 +22,16 @@ export class AuthService {
     userModel.isAdmin =this.cookieService.check('isadmin') ? JSON.parse(this.cookieService.get ("isadmin")): false;
     return userModel;
 
-  }
+  };
 
   setCookies(user:UserModel) {
     this.cookieService.set('username', user.userName);
     this.cookieService.set('isadmin',user.isAdmin.toString());
+
+  };
+
+  deleteCookies(){
+    this.cookieService.deleteAll(); 
 
   }
   

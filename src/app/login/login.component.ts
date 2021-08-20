@@ -5,7 +5,6 @@ import { NotifactionService } from '../shared/notifaction.service';
 import { UserService } from '../services/user.service';
 import { AuthService } from '../services/auth.service';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,22 +12,18 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
   userModel: UserModel = new UserModel();
-   returnUrl: string='/';
+  returnUrl: string = '/';
 
   constructor(
     private userService: UserService,
     private notifactionService: NotifactionService,
     private router: Router,
-    private authService :AuthService,
-    private route: ActivatedRoute,
-
-    
+    private authService: AuthService,
+    private route: ActivatedRoute
   ) {}
 
- 
-
   ngOnInit(): void {
-    this.returnUrl = this.route.snapshot.queryParams["returnUrl"] || "/";
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   onUserFormSubmit() {
@@ -44,18 +39,18 @@ export class LoginComponent implements OnInit {
         this.notifactionService.success(
           `${this.userModel.userName} logged in Successfully.`
         );
-        this.authService.setCookies(users.filter(
-          (user) =>
-            user.userName == this.userModel.userName &&
-            user.password == this.userModel.password
-        )[0]);
+        this.authService.setCookies(
+          users.filter(
+            (user) =>
+              user.userName == this.userModel.userName &&
+              user.password == this.userModel.password
+          )[0]
+        );
         this.router.navigate([this.returnUrl]);
       } else {
         this.notifactionService.error('User login failed');
       }
     });
-
-
   }
 }
 

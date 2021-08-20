@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { Authguard } from './services/authguard.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
+import { BookhubComponent } from './bookhub/bookhub.component';
 
 const routes: Routes = [
   {
@@ -29,10 +30,15 @@ const routes: Routes = [
   component : AccessDeniedComponent
 },
 {
+  path :'bookhub',
+  component: BookhubComponent
+},
+{
   path: '**',
   redirectTo: '/pagenotfound',
   pathMatch: 'full',
 },
+
 
 ];
 
