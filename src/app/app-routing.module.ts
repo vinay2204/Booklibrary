@@ -6,6 +6,7 @@ import { Authguard } from './services/authguard.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
 import { BookhubComponent } from './bookhub/bookhub.component';
+import { FirstSessionComponent } from './dashboard/first-session/first-session.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,13 @@ const routes: Routes = [
  
   {
     path: 'dashboard',
-    component: DashboardComponent, canActivate:[Authguard]
+    component: DashboardComponent, canActivate:[Authguard],
+ 
+
+  },
+  {
+    path: 'firstsection',
+    component:FirstSessionComponent
   },
   {path:'pagenotfound',
   component : PageNotFoundComponent,canActivate:[Authguard]

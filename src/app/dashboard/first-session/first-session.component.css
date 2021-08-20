@@ -1,0 +1,35 @@
+section{
+    width: 100vw;
+    overflow: hidden;
+}
+.divi{
+    background:  linear-gradient(to bottom,#aa9d87,rgba(66, 112, 112, 0.404)),url(/assets/images/wallpaper2you.jpg);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: center;
+   
+}
+.divi h1{
+    font-size: 2.2em;
+    font-weight: 700;
+    font-family: 'Old Standard TT', serif;
+    margin-top: 2.5em;
+}
+.divi p{
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-family: 'Old Standard TT', serif;
+    font-weight: 400;
+    text-align: start;
+}
+.divi .btn{
+    border-radius: 15em !important;
+}
+ .divi .btn a{
+     text-decoration: none;
+        color: white;
+  
+    padding: 5em,15em !important;
+
+}

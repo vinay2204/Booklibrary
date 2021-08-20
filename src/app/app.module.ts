@@ -17,11 +17,12 @@ import { CookieService } from 'ngx-cookie-service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
 import { BookhubComponent } from './bookhub/bookhub.component';
+import { FirstSessionComponent } from './dashboard/first-session/first-session.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, LoginReactiveComponent, DashboardComponent, PageNotFoundComponent, AccessDeniedComponent, BookhubComponent],
+  declarations: [AppComponent, LoginComponent, LoginReactiveComponent, DashboardComponent, PageNotFoundComponent, AccessDeniedComponent, BookhubComponent, FirstSessionComponent],
   imports:
    [BrowserModule,
      AppRoutingModule,

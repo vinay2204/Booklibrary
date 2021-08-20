@@ -1,12 +1,10 @@
-.direct{
-    /* background:#4D9C66; */
-    background-color: lightblue;
-    height: 90vh;
+header{
+   
     width: 100vw;
 }
 .bttn{
     width: 5em;
-    margin-left: 15em;
+    
     float: right;
     
 }
