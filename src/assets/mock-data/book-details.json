@@ -3,15 +3,17 @@
     "bookName": "The Lion, the Witch and the Wardrobe",
     "authorName": "C. S. Lewis",
     "language": "English",
-    "bookId": "b",
+    "bookId": "lewis",
     "publishedOn": 1950,
-    "bookcount":8,
+    "bookcount":18,
     "url": "https://upload.wikimedia.org/wikipedia/en/8/86/TheLionWitchWardrobe%281stEd%29.jpg"
   },
   {
     "bookName": "The Da Vinci Code",
     "authorName": "Dan Brown",
     "language": "English",
+    "bookcount":15,
+    "bookId": "dan",
     "published": 2003,
     "url": "https://upload.wikimedia.org/wikipedia/en/6/6b/DaVinciCode.jpg"
   },
@@ -19,6 +21,8 @@
     "bookName": "The Catcher in the Rye",
     "authorName": "Dan Brown",
     "language": "English",
+    "bookcount":12,
+    "bookId": "brown",
     "published": 1951,
     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg/220px-The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg"
   },
@@ -27,6 +31,8 @@
     "authorName": "Robert James Waller",
     "language": "English",
     "published": 1992,
+    "bookcount":25,
+    "bookId": "james",
     "url": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/BridgesOfMadisonCounty.jpg/220px-BridgesOfMadisonCounty.jpg"
   },
   {
@@ -34,6 +40,8 @@
     "authorName": "Lew Wallace",
     "language": "English",
     "published": 1880,
+    "bookcount":10,
+    "bookId": "lew",
     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Wallace_Ben-Hur_cover.jpg/220px-Wallace_Ben-Hur_cover.jpg"
   },
   {
@@ -41,12 +49,16 @@
     "authorName":"Khaled Hosseini",
     "language": "English",
     "published": 2003,
+    "bookcount":22,
+    "bookId": "khaled",
     "url": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/Kite_runner.jpg/220px-Kite_runner.jpg  "
   },
   {
     "bookName": "The Hobbit",
     "authorName":"J. R. R. Tolkien",
     "language": "English",
+    "bookcount":16,
+    "bookId": "tolkien",
     "published": 1937,
     "url": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/TheHobbit_FirstEdition.jpg/220px-TheHobbit_FirstEdition.jpg"
   },
@@ -55,6 +67,8 @@
     "authorName": "Antoine de Saint-Exupéry",
     "language": "French",
     "published": 1943,
+    "bookcount":9,
+    "bookId": "saint",
     "url": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Littleprince.JPG/220px-Littleprince.JPG"
   },
   {
@@ -62,6 +76,8 @@
     "authorName": "Cao Xueqin",
     "language": "Chinese",
     "published": 2003,
+    "bookcount":6,
+    "bookId": "cao",
     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Hongloumeng2.jpg/180px-Hongloumeng2.jpg"
   },
   {
@@ -69,6 +85,8 @@
     "authorName": "Agatha Christie",
     "language": "English",
     "published": 1939,
+    "bookcount":5,
+    "bookId": "chris",
     "url": "https://upload.wikimedia.org/wikipedia/en/4/4a/And_Then_There_Were_None_First_Edition_Cover_1939.jpg"
   }
   
