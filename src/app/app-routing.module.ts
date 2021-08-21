@@ -28,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'firstsection',
-    component:FirstSessionComponent,canDeactivate :[DeactivateGuard]
+    component:FirstSessionComponent,
   },
   {path:'pagenotfound',
   component : PageNotFoundComponent,canActivate:[Authguard]
