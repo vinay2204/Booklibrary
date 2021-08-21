@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { NotifactionService } from '../shared/notifaction.service';
 
 
 @Component({
@@ -11,7 +12,9 @@ import { AuthService } from '../services/auth.service';
 export class DashboardComponent implements OnInit {
   
 
+
   constructor(
+    private notificationService: NotifactionService,
     private authService:AuthService,
    private router:Router,
    
@@ -22,6 +25,9 @@ export class DashboardComponent implements OnInit {
 
   deleteCookie(){
     this.authService.deleteCookies();
+    this.notificationService.warn('Your Page Will Be Disapper');
+    this.router.navigate(['/login'])
+    return true;
       
    
     

@@ -18,6 +18,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
 import { BookhubComponent } from './bookhub/bookhub.component';
 import { FirstSessionComponent } from './dashboard/first-session/first-session.component';
+import { DeactivateGuard } from './deactivate.guard';
 
 
 
@@ -34,6 +35,7 @@ import { FirstSessionComponent } from './dashboard/first-session/first-session.c
     
     ],
   providers: [ CookieService,
+    DeactivateGuard,
     
   ],
   bootstrap: [AppComponent],
