@@ -17,12 +17,12 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent, canDeactivate :[DeactivateGuard]
+    component: LoginComponent, 
   },
  
   {
     path: 'dashboard',
-    component: DashboardComponent, canActivate:[Authguard],
+    component: DashboardComponent, canActivate:[Authguard],canDeactivate :[DeactivateGuard]
     
  
   },

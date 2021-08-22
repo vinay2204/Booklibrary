@@ -17,7 +17,7 @@ export class DeactivateGuard implements CanDeactivate<DashboardComponent> {
 
   canDeactivate():boolean
   {
-     this.notificationservice.warn('Are You Sure');
-     return true;
+    //  this.notificationservice.success('Are You Sure');
+     return window.confirm('Please Confirm');
     }
   }

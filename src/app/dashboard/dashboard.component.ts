@@ -25,9 +25,9 @@ export class DashboardComponent implements OnInit {
 
   deleteCookie(){
     this.authService.deleteCookies();
-    this.notificationService.warn('Your Page Will Be Disapper');
+   
     this.router.navigate(['/login'])
-    return true;
+    return window.confirm("are you sure");
       
    
     
