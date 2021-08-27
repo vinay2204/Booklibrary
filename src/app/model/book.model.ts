@@ -2,7 +2,7 @@ export class BookDetailsModel{
     "bookName": string;
     "authorName": string;
     "language": string;
-    "published": number;
+    "published": string;
     "bookcount":number;
     "bookId": string;
 
@@ -12,6 +12,7 @@ export class BookDetailsModel{
         this.authorName = '';
         this.language ='';
         this.bookId ='';
+        this.published ='';
        
 
         }
