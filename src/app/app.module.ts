@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { LoginComponent } from './login/login.component';
-import { LoginReactiveComponent } from './login-reactive/login-reactive.component';
+
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -19,25 +19,31 @@ import { AccessDeniedComponent } from './access-denied/access-denied.component';
 import { BookhubComponent } from './bookhub/bookhub.component';
 import { FirstSessionComponent } from './dashboard/first-session/first-session.component';
 import { DeactivateGuard } from './deactivate.guard';
-
-
+import { HeaderComponent } from './header/header.component';
+import { BookItemComponent } from './book-item/book-item.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, LoginReactiveComponent, DashboardComponent, PageNotFoundComponent, AccessDeniedComponent, BookhubComponent, FirstSessionComponent],
-  imports:
-   [BrowserModule,
-     AppRoutingModule,
-      FormsModule,
-      HttpClientModule,
-      CommonModule,
-      BrowserAnimationsModule,
-      ToastrModule.forRoot(),
-    
-    ],
-  providers: [ CookieService,
-    DeactivateGuard,
-    
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    DashboardComponent,
+    PageNotFoundComponent,
+    AccessDeniedComponent,
+    BookhubComponent,
+    FirstSessionComponent,
+    HeaderComponent,
+    BookItemComponent,
   ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+  ],
+  providers: [CookieService, DeactivateGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -30,7 +30,7 @@
           <div>
             <!-- Email input -->
             <label class="form-label" for="form3Example3">Email address</label>
-            <div class="form-outline  mb-2 ">
+            <div class="form-outline mb-2">
               <input
                 [(ngModel)]="userModel.userName"
                 type="text"
@@ -38,20 +38,29 @@
                 name="userName"
                 id="form3Example3"
                 class="form-control form-control-lg"
-                #userName="ngModel" 
+                #userName="ngModel"
                 minlength="4"
                 pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                
-                required              />
+                required
+              />
 
-                <!-- <div [hidden]="userName.valid || userName.pristine"
+              <!-- <div [hidden]="userName.valid || userName.pristine"
                 class="alert alert-danger">
              Name is required
            </div> -->
-              <div *ngIf=" userName.invalid && (userName.dirty || userName.touched)"  class="alert alert-danger">
-                <div *ngIf= "userName.errors?.required">Please enter userName</div>
-                <div *ngIf= "userName.errors?.pattern">Please provide a valid email</div>
-                <div *ngIf= "userName.errors?.minlength ">user name is too small</div>
+              <div
+                *ngIf="userName.invalid && (userName.dirty || userName.touched)"
+                class="alert alert-danger"
+              >
+                <div *ngIf="userName.errors?.required">
+                  Please enter userName
+                </div>
+                <div *ngIf="userName.errors?.pattern">
+                  Please provide a valid email
+                </div>
+                <div *ngIf="userName.errors?.minlength">
+                  user name is too small
+                </div>
                 <!-- <span *ngIf= "userName.errors?.minlength">Please enter userName</span> -->
               </div>
               <!-- <div
@@ -69,27 +78,34 @@
             <div class="form-outline mb-3">
               <input
                 [(ngModel)]="userModel.password"
-                #password ="ngModel"
+                #password="ngModel"
                 minlength="8"
                 pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$"
                 type="password"
-                 required
+                required
                 name="password"
                 id="form3Example4"
                 class="form-control form-control-lg"
                 placeholder="Enter password"
-                
               />
-              <div *ngIf=" password.invalid && (password.dirty || password.touched)"  class="alert alert-danger" >
+              <div
+                *ngIf="password.invalid && (password.dirty || password.touched)"
+                class="alert alert-danger"
+              >
                 <!-- <span *ngIf= "userName.errors?.required">Please enter userName</span> -->
-                <div *ngIf= "userName.errors?.required">password must contain 1 number (0-9)
-                  password must contain 1 uppercase letters
-                  password must contain 1 lowercase letters
-                  password must contain 1 non-alpha numeric number
-                  password is 8-16 characters with no space</div>
-                <div *ngIf= "userName.errors?.pattern">Please provide a valid password</div>
-                <div *ngIf= "password.errors?.minlength">must contains more than 5 characters</div>
+                <div *ngIf="userName.errors?.required">
+                  password must contain 1 number (0-9) password must contain 1
+                  uppercase letters password must contain 1 lowercase letters
+                  password must contain 1 non-alpha numeric number password is
+                  8-16 characters with no space
                 </div>
+                <div *ngIf="userName.errors?.pattern">
+                  Please provide a valid password
+                </div>
+                <div *ngIf="password.errors?.minlength">
+                  must contains more than 5 characters
+                </div>
+              </div>
             </div>
           </div>
 
@@ -114,7 +130,6 @@
               type="submit"
               class="btn btn-primary btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem"
-             
             >
               Login
             </button>

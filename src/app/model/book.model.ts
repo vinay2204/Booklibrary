@@ -1,10 +1,10 @@
 export class BookDetailsModel{
-    "bookName": string;
-    "authorName": string;
-    "language": string;
-    "published": string;
-    "bookcount":number;
-    "bookId": string;
+    bookName: string;
+    authorName: string;
+    language: string;
+    published: string;
+    bookcount:number;
+    bookId: string;
 
 
     constructor(){
@@ -13,6 +13,7 @@ export class BookDetailsModel{
         this.language ='';
         this.bookId ='';
         this.published ='';
+        this.bookcount = 0
        
 
         }

@@ -23,16 +23,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  deleteCookie(){
-    this.authService.deleteCookies();
-   
-    this.router.navigate(['/login'])
-    return window.confirm("are you sure");
-      
-   
-    
-    
-    
-  }
+  
 
 }
