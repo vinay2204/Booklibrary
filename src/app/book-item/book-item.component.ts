@@ -1,31 +1,33 @@
 import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRouteSnapshot } from '@angular/router';
 import { BookDetailsModel } from '../model/book.model';
+import { BookService } from '../services/book.service';
 
 @Component({
   selector: 'app-book-item',
   templateUrl: './book-item.component.html',
-  styleUrls: ['./book-item.component.css']
+  styleUrls: ['./book-item.component.css'],
 })
 export class BookItemComponent implements OnInit {
   bookDetail: BookDetailsModel = new BookDetailsModel();
-  bookService: any;
+  
+
 
   constructor(
-    private activatedRouteSnapshots: ActivatedRouteSnapshot,
+    private bookService: BookService,
+    
 
-  ) { }
-  
- 
+  ) 
+  { }
+
   ngOnInit(): void {
-    this.getBookList()
-
-    
+    this.getBookList();
   }
-  getBookList(){
-    this.bookService.getBookList().subscribe((this.bookDetail)); 
-    
+  getBookList() {
+    this.bookService.getBookList().subscribe((books) =>{
+      console.log(books);
+      this.bookDetail = books[0];
+    })
   }
-
+  
 }

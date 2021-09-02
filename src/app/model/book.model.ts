@@ -5,7 +5,9 @@ export class BookDetailsModel{
     published: string;
     bookcount:number;
     bookId: string;
-
+    url:string;
+   
+    
 
     constructor(){
         this.bookName ='';
@@ -13,7 +15,8 @@ export class BookDetailsModel{
         this.language ='';
         this.bookId ='';
         this.published ='';
-        this.bookcount = 0
+        this.bookcount = 0;
+        this.url='';
        
 
         }

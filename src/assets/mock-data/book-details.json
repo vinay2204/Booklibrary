@@ -3,7 +3,7 @@
     "bookName": "The Lion, the Witch and the Wardrobe",
     "authorName": "C. S. Lewis",
     "language": "English",
-    "bookId": "lewis",
+    "bookId": "1",
     "publishedOn": 1950,
     "bookcount":"18",
     "url": "/assets/images/TheLionWitchWardrobe(1stEd).jpg"
@@ -13,7 +13,7 @@
     "authorName": "Dan Brown",
     "language": "English",
     "bookcount":"15",
-    "bookId": "dan",
+    "bookId": "10",
     "published": 2003,
     "url": "/assets/images/DaVinciCode .jpg"
   },
@@ -22,7 +22,7 @@
     "authorName": "Dan Brown",
     "language": "English",
     "bookcount":"12",
-    "bookId": "brown",
+    "bookId": "2",
     "published": 1951,
     "url": "/assets/images/220px-The_Catcher_in_the_Rye_(1951,_first_edition_cover).jpg" 
   },
@@ -32,7 +32,7 @@
     "language": "English",
     "published": 1992,
     "bookcount":"25",
-    "bookId": "james",
+    "bookId": "3",
     "url": "/assets/images/220px-BridgesOfMadisonCounty.jpg"
   },
   {
@@ -41,7 +41,7 @@
     "language": "English",
     "published": 1880,
     "bookcount":"10",
-    "bookId": "lew",
+    "bookId": "4",
     "url": "/assets/images/220px-Wallace_Ben-Hur_cover.jpg"
   },
   {
@@ -50,7 +50,7 @@
     "language": "English",
     "published": 2003,
     "bookcount":"22",
-    "bookId": "khaled",
+    "bookId": "5",
     "url": "/assets/images/220px-Kite_runner.jpg  "
   },
   {
@@ -58,7 +58,7 @@
     "authorName":"J. R. R. Tolkien",
     "language": "English",
     "bookcount":"15",
-    "bookId": "tolkien",
+    "bookId": "6",
     "published": 1937,
     "url": "/assets/images/220px-TheHobbit_FirstEdition.jpg"
   },
@@ -68,7 +68,7 @@
     "language": "French",
     "published": 1943,
     "bookcount":"9",
-    "bookId": "saint",
+    "bookId": "7",
     "url": "/assets/images/220px-Littleprince.jpg"
   },
   {
@@ -77,7 +77,7 @@
     "language": "Chinese",
     "published": 2003,
     "bookcount":"20",
-    "bookId": "cao",
+    "bookId": "8",
     "url": "/assets/images/180px-Hongloumeng2.jpg"
   },
   {
@@ -86,7 +86,7 @@
     "language": "English",
     "published": 1939,
     "bookcount":"5",
-    "bookId": "chris",
+    "bookId": "9",
     "url": "/assets/images/10little.jpg"
   }
   

@@ -6,8 +6,11 @@ import { Authguard } from './services/authguard.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
 import { BookhubComponent } from './bookhub/bookhub.component';
-import { FirstSessionComponent } from './dashboard/first-session/first-session.component';
+
 import { DeactivateGuard } from './deactivate.guard';
+import { BookItemComponent } from './book-item/book-item.component';
+import { AboutComponent } from './about/about.component';
+import { BooksComponent } from './books/books.component';
 
 const routes: Routes = [
   {
@@ -17,37 +20,45 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent, 
+    component: LoginComponent,
   },
- 
+
   {
     path: 'dashboard',
-    component: DashboardComponent, canActivate:[Authguard],canDeactivate :[DeactivateGuard]
-    
- 
+    component: DashboardComponent,
+    canActivate: [Authguard],
+    canDeactivate: [DeactivateGuard],
   },
   {
-    path: 'firstsection',
-    component:FirstSessionComponent,
+    path: 'about',
+    component: AboutComponent,
   },
-  {path:'pagenotfound',
-  component : PageNotFoundComponent,canActivate:[Authguard]
-},
-{
-  path: 'accessdenied',
-  component : AccessDeniedComponent
-},
-{
-  path :'bookhub',
-  component: BookhubComponent
-},
-{
-  path: '**',
-  redirectTo: '/pagenotfound',
-  pathMatch: 'full',
-},
-
-
+  {
+    path: 'books',
+    component: BooksComponent,
+  },
+  {
+    path: 'book-item',
+    component: BookItemComponent,
+  },
+  {
+    path: 'pagenotfound',
+    component: PageNotFoundComponent,
+    canActivate: [Authguard],
+  },
+  {
+    path: 'accessdenied',
+    component: AccessDeniedComponent,
+  },
+  {
+    path: 'bookhub',
+    component: BookhubComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '/pagenotfound',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

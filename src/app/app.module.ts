@@ -17,10 +17,13 @@ import { CookieService } from 'ngx-cookie-service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
 import { BookhubComponent } from './bookhub/bookhub.component';
-import { FirstSessionComponent } from './dashboard/first-session/first-session.component';
+
 import { DeactivateGuard } from './deactivate.guard';
 import { HeaderComponent } from './header/header.component';
 import { BookItemComponent } from './book-item/book-item.component';
+import { AboutComponent } from './about/about.component';
+import { BooksComponent } from './books/books.component';
+
 
 @NgModule({
   declarations: [
@@ -30,9 +33,11 @@ import { BookItemComponent } from './book-item/book-item.component';
     PageNotFoundComponent,
     AccessDeniedComponent,
     BookhubComponent,
-    FirstSessionComponent,
+  
     HeaderComponent,
     BookItemComponent,
+    AboutComponent,
+    BooksComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,41 @@
-<p>book-item works!</p>
+<div class="xent">
+<div class="container row col -2 m-auto">
+  <div class="card mb-3"
+    *ngFor= "let bookDetail of books"
+  
+  style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          [src]="bookDetail.url"
+          class="img-fluid rounded-start"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+       
+        
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+          <h3 class="card-title">{{bookDetail.bookName}}</h3>
+          <h4 class="card-title">{{bookDetail.bookId}}</h4>
+          <h4 class="card-title">{{bookDetail.authorName}}</h4>
+          <h4 class="card-title">{{bookDetail.language}}</h4>
+          <h4 class="card-title">{{bookDetail.published}}</h4>
+          <h4 class="card-title">{{bookDetail. bookcount}}</h4>
+          <p class="card-text">
+            Gone with the Wind is a controversial reference point for subsequent
+            writers of the South, both black and white. Scholars at American
+            universities refer to, interpret, and study it in their writings.
+            The novel has been absorbed into American popular culture..
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+</div>
