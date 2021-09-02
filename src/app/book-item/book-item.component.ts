@@ -9,7 +9,7 @@ import { BookService } from '../services/book.service';
   styleUrls: ['./book-item.component.css'],
 })
 export class BookItemComponent implements OnInit {
-  bookDetail: BookDetailsModel = new BookDetailsModel();
+  books: BookDetailsModel[] = [];
   
 
 
@@ -26,7 +26,7 @@ export class BookItemComponent implements OnInit {
   getBookList() {
     this.bookService.getBookList().subscribe((books) =>{
       console.log(books);
-      this.bookDetail = books[0];
+      this.books = books;
     })
   }
   
