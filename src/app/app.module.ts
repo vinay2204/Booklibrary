@@ -23,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
 import { BookItemComponent } from './book-item/book-item.component';
 import { AboutComponent } from './about/about.component';
 import { BooksComponent } from './books/books.component';
+import { HighlightDirective } from './shared/highlight.directive';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { BooksComponent } from './books/books.component';
     BookItemComponent,
     AboutComponent,
     BooksComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

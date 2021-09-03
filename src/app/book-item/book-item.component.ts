@@ -10,7 +10,7 @@ import { BookService } from '../services/book.service';
 })
 export class BookItemComponent implements OnInit {
   books: BookDetailsModel[] = [];
-
+  color ='yellow';
   constructor(
     private bookService: BookService,
     
