@@ -10,8 +10,6 @@ import { BookService } from '../services/book.service';
 })
 export class BookItemComponent implements OnInit {
   books: BookDetailsModel[] = [];
-  
-
 
   constructor(
     private bookService: BookService,

@@ -6,6 +6,9 @@ export class BookDetailsModel{
     bookcount:number;
     bookId: string;
     url:string;
+    publishedDate: string;
+    para: string;
+    
    
     
 
@@ -17,6 +20,8 @@ export class BookDetailsModel{
         this.published ='';
         this.bookcount = 0;
         this.url='';
+       this.publishedDate= "";
+       this.para="";
        
 
         }

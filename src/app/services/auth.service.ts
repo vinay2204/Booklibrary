@@ -8,7 +8,7 @@ import { UserModel } from '../model/user.model';
   providedIn: 'root'
 })
 export class AuthService {
-  cookies: any;
+ 
  
 
   constructor(
