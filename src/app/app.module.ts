@@ -24,6 +24,9 @@ import { BookItemComponent } from './book-item/book-item.component';
 import { AboutComponent } from './about/about.component';
 import { BooksComponent } from './books/books.component';
 import { HighlightDirective } from './shared/highlight.directive';
+import { BookRecordComponent } from './book-record/book-record.component';
+import { DurationPipe } from './shared/duration pipe';
+
 
 
 @NgModule({
@@ -40,6 +43,8 @@ import { HighlightDirective } from './shared/highlight.directive';
     AboutComponent,
     BooksComponent,
     HighlightDirective,
+    BookRecordComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,

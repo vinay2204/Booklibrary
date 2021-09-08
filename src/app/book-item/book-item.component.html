@@ -1,38 +1,52 @@
 <div class="xent">
-<div class="container row col -2 m-auto">
-  <div class="card mb-3"
-    *ngFor= "let bookDetail of books"
-  
-  >
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img
-          [src]="bookDetail.url"
-          class="img-fluid rounded-start"
-          alt="..."
-        />
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-       
-        
-          <i class="fa fa-pencil" aria-hidden="true"></i>
-          <h4 [appHighlight] = 'color' class="card-title">Book-Name : {{bookDetail.bookName}}</h4>
-          <h5 class="card-title">I'd : {{bookDetail.bookId}}</h5>
-          <h5 class="card-title"> Author : {{bookDetail.authorName}}</h5>
-          <h5 class="card-title"> language : {{bookDetail.language}}</h5>
-          <h5 class="card-title"> Published Date : {{bookDetail.published}}</h5>
-          <h5 class="card-title">Remaining : {{bookDetail.bookcount}}</h5>
-          <h5 class="card-title"> Issued Date :  {{bookDetail.publishedDate}}</h5>
-          <h6 class="card-title">{{bookDetail.para}}</h6>
+  <div class="container row col -2 m-auto">
+    <h2>Pick a highlight color</h2>
+    <div >
+ 
+      <input type="radio" name="colors" (click)="color = 'lightgreen'" />Green
+      <input type="radio" name="colors" (click)="color = 'yellow'" />Yellow
+      <input type="radio" name="colors" (click)="color = 'cyan'" />Cyan
+    </div>
+     <div class="card mb-3" *ngFor="let bookDetail of books">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            [src]="bookDetail.url"
+            class="img-fluid rounded-start"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body ">
+          
+           <button class="pencil "> <i class="fa fa-pencil" (click)="edit()"
+            
+            aria-hidden="true"></i>  </button>
+            
+            
+            <h4 [appHighlight]="color" defaultColor="blue" class="card-title">
+              Book-Name : {{ bookDetail.bookName | uppercase }}
+            </h4>
          
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
+            <h5 class="card-title"  >I'd : {{ bookDetail.bookId }}</h5>
+            <h5 class="card-title">Author : {{ bookDetail.authorName | uppercase }}</h5>
+            <h5 class="card-title">language : {{ bookDetail.language }}</h5>
+            <h5 class="card-title">
+              Published Date : {{ bookDetail.published }}
+            </h5>
+            <h5 class="card-title">Remaining : {{ bookDetail.bookcount }}</h5>
+            <h5 class="card-title">
+              Issued Date : {{ bookDetail.publishedDate |date:"MM/dd/YYYY" }}
+            </h5>
+            <h6 class="card-title">{{ bookDetail.para }}</h6>
+
+            <p class="card-text">
+              <small class="text-muted">{{ bookDetail.publishedDate | durationPipe}}</small>
+            </p>
+          
+          </div>
         </div>
       </div>
     </div>
   </div>
- 
-</div>
 </div>

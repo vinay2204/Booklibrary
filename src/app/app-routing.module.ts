@@ -11,6 +11,7 @@ import { DeactivateGuard } from './deactivate.guard';
 import { BookItemComponent } from './book-item/book-item.component';
 import { AboutComponent } from './about/about.component';
 import { BooksComponent } from './books/books.component';
+import { BookRecordComponent } from './book-record/book-record.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'book-item',
     component: BookItemComponent,
+  },
+  {
+    path: 'book-record',
+    component: BookRecordComponent,
   },
   {
     path: 'pagenotfound',
