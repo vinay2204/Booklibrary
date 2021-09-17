@@ -8,6 +8,7 @@ import {BookDetailsModel} from '../model/book.model';
   providedIn: 'root',
 })
 export class BookService {
+  show: any;
   constructor(private httpClient: HttpClient) {}
 
   getBookList(): Observable<BookDetailsModel[]> {

@@ -1,4 +1,5 @@
 export class BookDetailsModel{
+   
     bookName: string;
     authorName: string;
     language: string;
@@ -8,6 +9,8 @@ export class BookDetailsModel{
     url:string;
     publishedDate: string;
     para: string;
+    isEditable: boolean;
+     
     
    
     
@@ -22,6 +25,7 @@ export class BookDetailsModel{
         this.url='';
        this.publishedDate= "";
        this.para="";
+       this.isEditable =true;
        
 
         }

@@ -24,8 +24,10 @@ import { BookItemComponent } from './book-item/book-item.component';
 import { AboutComponent } from './about/about.component';
 import { BooksComponent } from './books/books.component';
 import { HighlightDirective } from './shared/highlight.directive';
-import { BookRecordComponent } from './book-record/book-record.component';
+
 import { DurationPipe } from './shared/duration pipe';
+import { FeaturesComponent } from './features/features.component';
+import { DatepickerDirective } from './shared/datepicker.directive';
 
 
 
@@ -43,8 +45,10 @@ import { DurationPipe } from './shared/duration pipe';
     AboutComponent,
     BooksComponent,
     HighlightDirective,
-    BookRecordComponent,
-    DurationPipe
+    
+    DurationPipe,
+         FeaturesComponent,
+         DatepickerDirective
   ],
   imports: [
     BrowserModule,
@@ -54,8 +58,11 @@ import { DurationPipe } from './shared/duration pipe';
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    
+    
+
   ],
-  providers: [CookieService, DeactivateGuard],
+  providers: [CookieService, DeactivateGuard,],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

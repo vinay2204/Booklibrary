@@ -1,8 +1,8 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-
 import { BookDetailsModel } from '../model/book.model';
 import { BookService } from '../services/book.service';
+
 
 @Component({
   selector: 'app-book-item',
@@ -11,38 +11,30 @@ import { BookService } from '../services/book.service';
 })
 export class BookItemComponent implements OnInit {
   books: BookDetailsModel[] = [];
-  color ='';
- 
-  firstBook : any;
+  color = '';
+  isEditable = true;
+
 
   constructor(
     private bookService: BookService,
-    private router :Router,
-    private activatedRoute: ActivatedRoute,
-
-  ) 
-  { }
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.getBookList();
+
+
   }
   getBookList() {
-    this.bookService.getBookList().subscribe((books) =>{
+    this.bookService.getBookList().subscribe((books) => {
       console.log(books);
       this.books = books;
-      
-    })
+    });
+  }
+  edit(book: BookDetailsModel) {
+    book.isEditable = !book.isEditable;
+  };
 
-    this.firstBook = this.books.find(x=> x.bookId == '1')
-    
 
   }
-
-  edit(){
-    
-  this.router.navigate(['/book-record'])
-    
- 
-  }
-  
-}

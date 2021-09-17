@@ -1,13 +1,13 @@
 <div class="xent">
   <div class="container row col -2 m-auto">
     <h2>Pick a highlight color</h2>
-    <div >
- 
+    <div>
       <input type="radio" name="colors" (click)="color = 'lightgreen'" />Green
       <input type="radio" name="colors" (click)="color = 'yellow'" />Yellow
       <input type="radio" name="colors" (click)="color = 'cyan'" />Cyan
     </div>
-     <div class="card mb-3" *ngFor="let bookDetail of books">
+
+    <div class="card mb-3"*ngFor="let bookDetail of books" >
       <div class="row g-0">
         <div class="col-md-4">
           <img
@@ -17,36 +17,93 @@
           />
         </div>
         <div class="col-md-8">
-          <div class="card-body ">
-          
-           <button class="pencil "> <i class="fa fa-pencil" (click)="edit()"
-            
-            aria-hidden="true"></i>  </button>
-            
-            
+          <div class="card-body">
+            <button
+              class="pencil"
+              (click)="edit(bookDetail)"
+              *ngIf="bookDetail.isEditable"
+            >
+
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
+            <button
+              class="pencil"
+              (click)="edit(bookDetail)"
+              *ngIf="!bookDetail.isEditable"
+            >
+
+              <i class="fa fa-check" aria-hidden="true"></i>
+
+            </button>
+            <button
+              class="pencil"
+              (click)="edit(bookDetail)"
+              *ngIf="!bookDetail.isEditable"
+            >
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+
+
             <h4 [appHighlight]="color" defaultColor="blue" class="card-title">
               Book-Name : {{ bookDetail.bookName | uppercase }}
             </h4>
-         
-            <h5 class="card-title"  >I'd : {{ bookDetail.bookId }}</h5>
-            <h5 class="card-title">Author : {{ bookDetail.authorName | uppercase }}</h5>
-            <h5 class="card-title">language : {{ bookDetail.language }}</h5>
+
+
             <h5 class="card-title">
-              Published Date : {{ bookDetail.published }}
+              Author : {{ bookDetail.authorName | uppercase }}
             </h5>
-            <h5 class="card-title">Remaining : {{ bookDetail.bookcount }}</h5>
-            <h5 class="card-title">
-              Issued Date : {{ bookDetail.publishedDate |date:"MM/dd/YYYY" }}
+
+            <h5 class="card-title" >Language : {{ bookDetail.language }}
+
             </h5>
+
+
+            <h5 class="card-title" *ngIf= "bookDetail.isEditable">
+              Published Date :  {{ bookDetail.published }} </h5>
+              <div *ngIf = "!bookDetail.isEditable">
+              <h5>Date: <input type="text" appDatepicker/>
+            </h5>
+          </div>
+
+            <h5 class="card-title" *ngIf="bookDetail.isEditable">  Remaining : {{ bookDetail.bookcount }}</h5>
+            <div *ngIf="!bookDetail.isEditable" >
+              <h5 class="card-title">  Remaining : <input type="number" value="50"> </h5>
+
+                </div>
+            <h5 class="card-title" *ngIf="bookDetail.isEditable">
+              Issued Date : {{ bookDetail.publishedDate | durationPipe }}
+
+
+            </h5>
+
+              <div *ngIf="!bookDetail.isEditable">
+              <h5 class="card-title">
+
+                Issued Date : <input type="date"/>
+              </h5>
+            </div>
             <h6 class="card-title">{{ bookDetail.para }}</h6>
 
             <p class="card-text">
-              <small class="text-muted">{{ bookDetail.publishedDate | durationPipe}}</small>
+              <small class="text-muted">{{
+                bookDetail.publishedDate | durationPipe
+              }}</small>
             </p>
-          
           </div>
+
+          <div  *ngIf="!bookDetail.isEditable">
+          <div
+          (click)="edit(bookDetail)"
+
+          >
+
+        </div>
         </div>
       </div>
-    </div>
-  </div>
 </div>
+
+
+
+
+
+
